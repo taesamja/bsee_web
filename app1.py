@@ -300,7 +300,7 @@ def render_styled_pagination(current_page, total_pages, key_prefix="pagination")
 # --- Streamlit UI & 세션 상태 초기화 ---
 
 st.set_page_config(page_title="PDF 기반 Q&A 시스템", layout="wide")
-st.markdown('<p class="big-font">📚 EASY AI 맞춤 학습 도우미</p>', unsafe_allow_html=True)
+st.markdown('<p class="big-font">📚 EASY AI 전자회로 맞춤 학습 도우미</p>', unsafe_allow_html=True)
 st.info("AI 기반 PDF 학습자료 관리, Q&A, 자동 시험문제 생성이 여기에!")
 
 # 초기 세션 상태 값 설정
@@ -427,7 +427,7 @@ elif selected_menu == "❓ 질의응답":
             "일반적인 질문을 입력하세요:",
             value=st.session_state.user_question_simple,
             key="user_question_simple_input",
-            placeholder="예: AI란 무엇인가요?"
+            placeholder="예: 자유전자란 무엇인가요?"
         )
         if st.button("질문 제출(OpenAI)", key="submit_question_openai"):
             st.session_state.question_submitted_simple = True
@@ -572,3 +572,4 @@ elif selected_menu == "📑 문제 보기":
         page_clicked = render_styled_pagination(current_page, total_pages, key_prefix="quiz_page")
         if page_clicked is not None and page_clicked != current_page:
             st.session_state["quiz_page"] = page_clicked
+
