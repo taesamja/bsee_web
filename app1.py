@@ -52,6 +52,7 @@ html, body, [class*="stAppViewContainer"], [class*="stApp"]{ background:var(--bg
   font-size:2.25rem!important; font-weight:800; letter-spacing:-.02em;
   background:linear-gradient(120deg, var(--brand), var(--brand-2));
   -webkit-background-clip:text; background-clip:text; color:transparent!important; margin:0 0 .25rem 0;
+  margin-top: 1rem !important;
 }
 .subcap{ color:var(--muted); font-size:.95rem; }
 
