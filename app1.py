@@ -1,6 +1,6 @@
 # =============================================================
-# Streamlit App - Electronics (PCB) Themed UI/UX + Student QA + Numbered Options
-# Date: 2025-09-21 (final-polished)
+# Streamlit App - EASY AI 전자회로 맞춤 학습 도우미
+# Date: 2025-09-21 (last updated)
 # =============================================================
 
 import streamlit as st
