@@ -118,24 +118,53 @@ a.btn-primary{ display:inline-flex; align-items:center; gap:.5rem; background:li
   color:#fff!important; text-decoration:none!important; padding:.6rem 1rem; border-radius:12px; box-shadow:var(--shadow-md); }
 a.btn-primary:hover{ filter:brightness(1.05); }
 
-/* ====== PCB theme add-ons ====== */
+/* === HERO (웹서비스용) =================================== */
 .pcb-hero{
+  position: relative;
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 20px;
+  padding: 22px 20px;              /* ← 내부 여백 ↑ */
+  box-shadow: 0 10px 26px rgba(2,6,23,.06);
+  overflow: hidden;                /* 데코가 넘치지 않게 */
   background:
     radial-gradient(1200px 400px at -10% -10%, rgba(124,58,237,.12), transparent 50%),
     radial-gradient(900px 300px at 110% 120%, rgba(37,99,235,.12), transparent 60%),
     linear-gradient(120deg, rgba(37,99,235,.08), rgba(16,185,129,.06));
-  position:relative; border:1px solid rgba(15,23,42,.06); box-shadow:0 8px 24px rgba(0,0,0,.06);
-  border-radius:18px; padding:18px;
 }
+
+/* 회로 트레이스(기존 after 유지) */
 .pcb-hero::after{
-  content:""; position:absolute; inset:0;
+  content:"";
+  position:absolute; inset:0;
   background:
     repeating-linear-gradient(90deg, rgba(37,99,235,.08) 0 2px, transparent 2px 24px),
     repeating-linear-gradient(0deg, rgba(16,185,129,.08) 0 2px, transparent 2px 24px);
-  mask-image:radial-gradient(1200px 400px at 30% 40%, #000 30%, transparent 70%); pointer-events:none;
+  mask-image: radial-gradient(1200px 400px at 30% 40%, #000 30%, transparent 70%);
+  pointer-events:none;
 }
-.chip{ width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center; border-radius:10px;
-  background:#1e293b; color:#a7f3d0; box-shadow:var(--shadow-sm); border:1px solid rgba(255,255,255,.08); }
+
+/* 우상단 얇은 원형 데코(사용설명서 카드와 톤 맞춤) */
+.pcb-hero::before{
+  content:"";
+  position:absolute; right:-28px; top:-28px;
+  width: 150px; height:150px; border-radius:50%;
+  border: 2px solid rgba(37,99,235,.16);
+}
+
+/* 제목 전용 여백/줄높이 */
+.pcb-hero .hero-title{
+  margin: 6px 0 8px 0;            /* ← 위아래 간격 */
+  line-height: 1.15;
+}
+
+/* 보조 캡션과 간격 살짝 */
+.pcb-hero .subcap{ margin-top: 2px; }
+
+/* 칩 아이콘(기존과 동일) */
+.chip{ width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center;
+  border-radius:10px; background:#1e293b; color:#a7f3d0; box-shadow:var(--shadow-sm);
+  border:1px solid rgba(255,255,255,.08);
+}
 .chip svg{ width:26px; height:26px; }
 .unit-badge{ display:inline-flex; align-items:center; gap:.4rem; padding:.25rem .55rem;
   background:rgba(16,185,129,.12); color:#047857; border:1px solid rgba(16,185,129,.28); border-radius:999px; font-weight:700; font-size:.8rem; }
