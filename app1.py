@@ -705,6 +705,9 @@ with st.sidebar:
                 ">
                   <b>🔑 테스트용 계정</b><br>
                   <b>(아이디/비밀번호)</b><br>
+
+                  <hr style="border:0;border-top:1px solid rgba(37,99,235,.3); margin:8px 0;">
+                  
                   교사01: <code>teacher01 / 1111</code><br>
                   교사02: <code>teacher02 / 1111</code><br>
 
