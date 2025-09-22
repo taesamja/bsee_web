@@ -32,23 +32,11 @@ DEFAULT_PROJECT = "my-app"   # api_usage 프로젝트 구분자
 # ----------------------------- 페이지 설정 -----------------------------
 st.set_page_config(page_title="PDF 기반 Q&A 시스템", layout="wide")
 
+
+
+
 # ----------------------------- 스타일 (라이트 + PCB 테마) -----------------------------
 st.markdown("""
-
-<div style="
-    margin-top:14px;
-    padding:12px;
-    border-radius:12px;
-    border:1px dashed rgba(37,99,235,.35);
-    background:#f9fafb;
-    font-size:0.9rem;
-">
-  <b>🔑 테스트용 계정</b><br>
-  교사: <code>teacher01 / 1111</code><br>
-  교사: <code>teacher02 / 1111</code><br>
-  학생: <code>student01~05 / 1111</code>
-</div>
-
 <style>
 :root{
   --bg:#f6f7fb; --text:#0f172a; --muted:#6b7280; --brand:#2563eb; --brand-2:#7c3aed;
@@ -704,6 +692,25 @@ with st.sidebar:
                         st.query_params.update({"auth": "1", "u": user["username"], "r": user["role"]})
                         st.cache_data.clear()
                         st.rerun()
+
+            # 테스트 계정 표시
+            if st.button("로그인"):
+            st.markdown("""
+                <div style="
+                    margin-top:14px;
+                    padding:12px;
+                    border-radius:12px;
+                    border:1px dashed rgba(37,99,235,.35);
+                    background:#f9fafb;
+                    font-size:0.9rem;
+                ">
+                  <b>🔑 테스트용 계정</b><br>
+                  교사: <code>teacher01 / 1111</code><br>
+                  교사: <code>teacher02 / 1111</code><br>
+                  학생: <code>student01~05 / 1111</code>
+                </div>
+                """, unsafe_allow_html=True)
+       
         with tab_signup:
             sg_user = st.text_input("아이디", key="sg_user")
             sg_pw = st.text_input("비밀번호", type="password", key="sg_pw")
