@@ -714,7 +714,7 @@ with st.sidebar:
                   학생02: <code>student02 / 1111</code><br>
                   학생03: <code>student03 / 1111</code><br>
                   학생04: <code>student04 / 1111</code><br>
-                  학생05: <code>student05 / 1111</code><br>
+                  학생05: <code>student05 / 1111</code>
                 </div>
                 """, unsafe_allow_html=True)
             ############### 테스트 계정 표시 부분 끝 ############################
