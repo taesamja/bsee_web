@@ -693,7 +693,7 @@ with st.sidebar:
                         st.cache_data.clear()
                         st.rerun()
 
-            # 테스트 계정 표시
+            ############### 테스트 계정 표시 부분 시작 ############################
             st.markdown("""
                 <div style="
                     margin-top:14px;
@@ -704,11 +704,17 @@ with st.sidebar:
                     font-size:0.9rem;
                 ">
                   <b>🔑 테스트용 계정</b><br>
-                  교사: <code>teacher01 / 1111</code><br>
-                  교사: <code>teacher02 / 1111</code><br>
-                  학생: <code>student01~05 / 1111</code>
+                  <b>아이디/비밀번호 </b><br>
+                  교사01: <code>teacher01 / 1111</code><br>
+                  교사02: <code>teacher02 / 1111</code><br>
+                  학생01: <code>student01 / 1111</code><br>
+                  학생02: <code>student01 / 1111</code><br>
+                  학생03: <code>student01 / 1111</code><br>
+                  학생04: <code>student01 / 1111</code><br>
+                  학생05: <code>student01 / 1111</code><br>
                 </div>
                 """, unsafe_allow_html=True)
+            ############### 테스트 계정 표시 부분 끝 ############################
        
         with tab_signup:
             sg_user = st.text_input("아이디", key="sg_user")
