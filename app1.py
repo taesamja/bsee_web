@@ -694,7 +694,6 @@ with st.sidebar:
                         st.rerun()
 
             # 테스트 계정 표시
-            if st.button("로그인"):
             st.markdown("""
                 <div style="
                     margin-top:14px;
