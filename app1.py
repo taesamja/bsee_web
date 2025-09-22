@@ -34,6 +34,21 @@ st.set_page_config(page_title="PDF 기반 Q&A 시스템", layout="wide")
 
 # ----------------------------- 스타일 (라이트 + PCB 테마) -----------------------------
 st.markdown("""
+
+<div style="
+    margin-top:14px;
+    padding:12px;
+    border-radius:12px;
+    border:1px dashed rgba(37,99,235,.35);
+    background:#f9fafb;
+    font-size:0.9rem;
+">
+  <b>🔑 테스트용 계정</b><br>
+  교사: <code>teacher01 / 1111</code><br>
+  교사: <code>teacher02 / 1111</code><br>
+  학생: <code>student01~05 / 1111</code>
+</div>
+
 <style>
 :root{
   --bg:#f6f7fb; --text:#0f172a; --muted:#6b7280; --brand:#2563eb; --brand-2:#7c3aed;
