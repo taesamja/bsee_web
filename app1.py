@@ -707,11 +707,14 @@ with st.sidebar:
                   <b>아이디/비밀번호 </b><br>
                   교사01: <code>teacher01 / 1111</code><br>
                   교사02: <code>teacher02 / 1111</code><br>
+
+                  <hr style="border:0; border-top:1px solid rgba(37,99,235,.3); margin:8px 0;">
+                  
                   학생01: <code>student01 / 1111</code><br>
-                  학생02: <code>student01 / 1111</code><br>
-                  학생03: <code>student01 / 1111</code><br>
-                  학생04: <code>student01 / 1111</code><br>
-                  학생05: <code>student01 / 1111</code><br>
+                  학생02: <code>student02 / 1111</code><br>
+                  학생03: <code>student03 / 1111</code><br>
+                  학생04: <code>student04 / 1111</code><br>
+                  학생05: <code>student05 / 1111</code><br>
                 </div>
                 """, unsafe_allow_html=True)
             ############### 테스트 계정 표시 부분 끝 ############################
