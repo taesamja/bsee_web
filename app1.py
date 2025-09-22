@@ -708,7 +708,7 @@ with st.sidebar:
                   교사01: <code>teacher01 / 1111</code><br>
                   교사02: <code>teacher02 / 1111</code><br>
 
-                  <hr style="border:0; border-top:1px solid rgba(37,99,235,.3); margin:4px 0;">
+                  <hr style="border:0; border-bottom:1px border-top:1px solid rgba(37,99,235,.3); margin:8px 0;">
                   
                   학생01: <code>student01 / 1111</code><br>
                   학생02: <code>student02 / 1111</code><br>
