@@ -697,6 +697,7 @@ with st.sidebar:
             st.markdown("""
                 <div style="
                     margin-top:14px;
+                    margin-bottom:14px;
                     padding:12px;
                     border-radius:12px;
                     border:1px dashed rgba(37,99,235,.35);
@@ -704,11 +705,11 @@ with st.sidebar:
                     font-size:0.9rem;
                 ">
                   <b>🔑 테스트용 계정</b><br>
-                  <b>아이디/비밀번호 </b><br>
+                  <b>(아이디/비밀번호)</b><br>
                   교사01: <code>teacher01 / 1111</code><br>
                   교사02: <code>teacher02 / 1111</code><br>
 
-                  <hr style="border:0; border-bottom:1px border-top:1px solid rgba(37,99,235,.3); margin:8px 0;">
+                  <hr style="border:0;border-top:1px solid rgba(37,99,235,.3); margin:8px 0;">
                   
                   학생01: <code>student01 / 1111</code><br>
                   학생02: <code>student02 / 1111</code><br>
