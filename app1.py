@@ -657,14 +657,7 @@ def render_user_guide():
     </div>
     """, unsafe_allow_html=True)
 
-# URL 파라미터 → 로그인 복원
-qp = st.query_params
-if not st.session_state.auth.get("is_authenticated"):
-    auth_flag = qp.get("auth", "0")
-    u = qp.get("u", "")
-    r = qp.get("r", "")
-    if auth_flag == "1" and u and r in ("teacher", "student"):
-        set_auth(u, r)
+
 
 # ----------------------------- 사이드바 -----------------------------
 with st.sidebar:
@@ -689,7 +682,6 @@ with st.sidebar:
                     else:
                         set_auth(user["username"], user["role"])
                         st.success(f"로그인 성공! ({user['role']})")
-                        st.query_params.update({"auth": "1", "u": user["username"], "r": user["role"]})
                         st.cache_data.clear()
                         st.rerun()
 
@@ -737,7 +729,6 @@ with st.sidebar:
                         pw_hash = hash_password(sg_pw)
                         supabase.table("users").insert({"username": sg_user, "password_hash": pw_hash, "role": role}).execute()
                         set_auth(sg_user, role)
-                        st.query_params.update({"auth": "1", "u": sg_user, "r": role})
                         st.success(f"회원가입 및 자동 로그인 완료! ({role})")
                         st.cache_data.clear()
                         st.rerun()
