@@ -697,7 +697,6 @@ with st.sidebar:
             st.markdown("""
                 <div style="
                     margin-top:14px;
-                    margin-bottom:14px;
                     padding:12px;
                     border-radius:12px;
                     border:1px dashed rgba(37,99,235,.35);
